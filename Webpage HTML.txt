@@ -1,0 +1,47 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+<img src="http://192.168.0.34:8081" /> 
+<div style="float:right">
+
+</div>
+<div style=" height:640px; width:480px; float:right;">
+<center>
+<h1><span style="color:#5C5C5C;"> Made by Harshjot Singh and Lovepreet Singh</span></h1>
+<h2><span style="color:#FF0000;">SENECA COLLEGE</h2><br><br>
+<a href="#" id="up" style="font-size:30px;text-decoration:none;">  <br>Forward</a><br><br></center>
+<a href="#" id="left" style="font-size:30px;text-decoration:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Left</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" id="right" style="font-size:30px; text-decoration:none;"> Right </a><br><br>
+<center><a href="#" id="down" style="font-size:30px;text-decoration:none;"> Backward<br> </a></center>
+</div>
+
+<script>
+$( document ).ready(function(){
+    $("#down").on("mousedown", function() {
+     $.get('/down_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+    $("#up").on("mousedown", function() {
+     $.get('/up_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+    $("#left").on("mousedown", function() {
+     $.get('/left_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+    $("#right").on("mousedown", function() {
+     $.get('/right_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+});
+</script>
+
+</body>
+</html>
